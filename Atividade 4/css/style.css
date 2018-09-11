@@ -79,8 +79,8 @@ body {
 .menu-vertical {
 	font-family: Verdana,sans-serif;
 	padding: 20px; 
-	width: 15%;
-	height: 100%;
+	width: 15px;
+	height: 100px;
 	margin: 0px; 
 	box-shadow: 1px 1px 1px 1px #ddd;
 }
