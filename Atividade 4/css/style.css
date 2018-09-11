@@ -1,0 +1,105 @@
+body {
+    margin: 0;
+}
+
+.cont {
+	margin-top: 10px;
+}
+
+.cont a {
+	text-decoration: none;
+}
+
+.header{
+    margin-top: 5px;	
+	padding-top: 8px 16px;
+	overflow: hidden;	
+}
+
+.logo {
+	height: 40px;
+	width: 280px;
+	padding: 10px;
+	float: left;
+}
+
+/*.head-logo {
+	font-family: fontawesome;
+	padding: 10px;
+	color: #555555;
+	font-size: 35px;
+	float: left;
+	font-weight: bold;
+}
+
+.color-com {
+    color: #4CAF50;
+}*/
+
+.head-r {
+	font-family: "Segoe UI",Arial,sans-serif;
+	letter-spacing: 4px;
+	color: black;
+	font-size: 15px;
+	float: right;
+	padding-top: 25px;
+	padding-right: 15px;
+}
+
+.nav-bar {
+	font-family: "Segoe UI",Arial,sans-serif;
+	background-color: #4CAF50;
+	letter-spacing: 3px;
+	font-size: 17px;
+	box-shadow: 2px 2px 2px 2px #EDEDED;
+	overflow: hidden;	
+}
+
+.nav-bar ul{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.nav-bar li {
+	display: block;
+    padding: 20px;
+	float: left;
+}
+
+.nav-bar a {
+	letter-spacing: 3px;
+	color: white;
+}
+
+.nav-bar li:hover {
+	background-color: #4C8850;
+}
+
+.menu-vertical {
+	font-family: Verdana,sans-serif;
+	padding: 20px; 
+	width: 15%;
+	height: 100%;
+	margin: 0px; 
+	box-shadow: 1px 1px 1px 1px #ddd;
+}
+
+.menu-vertical a { 
+	text-decoration: none;
+	display: block; 
+	color: #444;
+	padding-top: 5px;
+}
+
+.menu-vertical a:hover { 
+	color: #4CAF50;
+	font-weight: bold;
+
+}
+
+.margin-top {
+	margin-top: 0px;
+}
+
+
