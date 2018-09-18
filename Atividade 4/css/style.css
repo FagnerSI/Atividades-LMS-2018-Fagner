@@ -2,13 +2,14 @@
     margin: 0px;
     padding: 0px;
 }
-.cont a {
+
+.nav a {
 	text-decoration: none;
 }
 
 .header{
     margin-top: 15px;	
-	padding-top: 8px 16px;
+	padding: 8px 16px;
 	overflow: hidden;
 }
 
@@ -26,19 +27,6 @@
 	float: right;
 }
 
-/*.head-logo {
-	font-family: fontawesome;
-	padding: 10px;
-	color: #555555;
-	font-size: 35px;
-	float: left;
-	font-weight: bold;
-}
-
-.color-com {
-    color: #4CAF50;
-}*/
-
 .head-text {
 	font-family: "Segoe UI",Arial,sans-serif;
 	letter-spacing: 4px;
@@ -54,14 +42,15 @@
 	background-color: #4CAF50;
 	letter-spacing: 3px;
 	font-size: 17px;
-	box-shadow: 2px 2px 2px 2px #EDEDED;
-	overflow: hidden;	
+	box-shadow: 2px 2px 2px 2px rgba(200, 200, 200, 0.6);
+	overflow: hidden;
+
 }
 
 .nav-bar ul{
 	list-style-type: none;
 }
-
+/*Icones Direito*/
 .nav-bar li i{
 	padding: 21.5px;
 	color: white;
@@ -72,36 +61,67 @@
 	background-color: white;
 }
 
-.nav-bar li a{
+/* Links Esquerdo*/
+.nav-bar ul li  a{
+    display: block;
     padding: 20px;
-	float: left;
 	color: white;
 }
 
-.nav-bar li a:hover{
+.nav-bar ul li  a:hover{
 	background-color: white;
 	color: black;
 }
 
-.menu-vertical {
+.dropdown{
+    float: left;
+}
 
+.dropdown .dropdown-click, .dropdown-content{
+    cursor: pointer;
+}
+
+.dropdown .dropdown-content{
+	position: absolute;
+	display: none;    
+    background-color: white;
+}
+
+.dropdown .dropdown-content li a{
+   color: black;
+   padding: 15px 65px 15px 30px;	
+}
+
+.dropdown .dropdown-content li a:hover{
+    font-weight: bold;
+    color: #4CAF50; 
+    background-color: #F0F0F0;
+    box-shadow: 1px 1px 1px rgba(200, 200, 200, 0.6);    
+}
+
+.dropdown:hover .dropdown-content{
+    display: block;
+
+}
+
+.menu-vertical {
 	font-family: Verdana,sans-serif;	
 	height: 100%;
 	width: 15%;
-	box-shadow: 1px 1px 1px 1px #ddd;
+	box-shadow: 1px 1px 1px 1px rgba(200, 200, 200, 0.6);
 }
 .menu-vertical ul{
 	list-style-type: none;
 }
 
-.menu-vertical li a, h3 { 
+.menu-vertical ul li a, h3 { 
     padding: 5px 20px 5px 20px;	
 	display: block; 
 	color: #444;
 	text-decoration: none;
 }
 
-.menu-vertical li a:hover { 
+.menu-vertical ul li a:hover { 
 	color: white;
 	background-color: #4CAF50;
 }
@@ -109,6 +129,3 @@
 .menu-vertical h3 { 
 	padding: 15px;    
 }
-
-
-
