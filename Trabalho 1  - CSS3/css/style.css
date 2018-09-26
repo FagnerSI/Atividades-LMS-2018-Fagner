@@ -5,11 +5,11 @@
 
 .header {
 	background-color: #f39c12;
+	overflow: hidden;
 }
 
 .header ul {
 	list-style-type: none;
-
 }
 
 .header ul li a {
@@ -19,8 +19,7 @@
 }
 
 .header > ul > li {	
-	padding: 20px
-
+	padding: 20px;
 }
 
 .header ul li:hover {
@@ -28,29 +27,27 @@
 }
 
 .dropdown {
-  position: relative;
-  display: inline-block;
-  color: white;
+  	float: left;
+  	color: white;
+  	cursor: pointer;
 }
 
 .dropdown-content {
-	top: 60px;
 	position: absolute;
-	visibility: hidden;
-    max-height:0;  
-    max-width: 400px; 
-    min-width: 100px; 
-    transition:max-height 2000ms;
-    background-color: #f39c12;
+	top: 60px;
+	visibility: hidden; 	
+	background-color: #f39c12;
+    max-height:0;
+    transition:max-height 2000ms;   
 }
 
 .dropdown-content li {
 	padding: 10px 20px; 
 }
 
-.dropdown:hover .dropdown-content {
-	visibility: visible;
+.dropdown:hover .dropdown-content {	
 	max-height: 500px;
+	visibility: visible;
 }
 
 
