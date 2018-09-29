@@ -5,11 +5,12 @@
 
 .header {
 	background-color: #f39c12;
-	overflow: hidden;
+	box-shadow: 2px 1px 5px 2px rgba(150, 150, 150, 0.5);
+	overflow: hidden;	
 }
 
 .header ul {
-	list-style-type: none;
+	list-style-type: none;	
 }
 
 .header ul li a {
@@ -34,11 +35,14 @@
 
 .dropdown-content {
 	position: absolute;
-	top: 60px;
+    top: 63px;
+    transform: translate(-13%);
 	visibility: hidden; 	
 	background-color: #f39c12;
+	min-width: 150px; 
     max-height:0;
-    transition:max-height 2000ms;   
+    transition:max-height 2000ms; 
+
 }
 
 .dropdown-content li {
@@ -49,5 +53,104 @@
 	max-height: 500px;
 	visibility: visible;
 }
+
+.content {
+	overflow: hidden;
+}
+
+.menu-bar {		
+	float: left;
+	overflow: auto;	
+	max-height: 90vh;    
+	width: 15%;
+	box-shadow: 0px 2px 5px 2px rgb(150,150, 150);
+	list-style-type: none;
+	background: rgb(240, 240, 240, 0.5);
+}
+
+.menu-bar h3 {
+  padding: 15px;
+}
+
+.menu-bar ul li{
+  color: black;
+  padding: 5px 20px;
+}
+
+.menu-bar ul li a{ 
+  color: black; 
+  text-decoration:none; 
+}
+
+.menu-bar ul li:hover a{
+  color: #e67e22;
+  font-weight: bold;
+}
+
+.info-bar {
+	float: right;
+	position: relative;
+	top: 60px;
+	right: 10px;
+	box-shadow: 2px 2px 20px 2px rgba(100, 100, 100, 0.8);
+	background-color: ; 
+	padding: 20px;
+    background: linear-gradient(#f39c12 5%, white 15%);	
+}
+
+.info-bar:hover {	
+	box-shadow: 2px 2px 30px 2px rgba(1, 1, 1, 1);	
+}
+
+.info-bar h3{
+	color: white;
+}
+
+.info-bar ul{
+	margin-top: 10px;
+	list-style-type: none;
+}
+
+.info-bar ul li{
+	padding: 5px;
+}
+
+.animation {
+	float: left;
+	margin: 20px;
+	position: relative;
+	width: 150px;
+	height: 150px;
+	animation-name: walk;
+	animation-duration: 10s;
+	animation-iteration-count: infinite;
+}
+
+@keyframes walk{
+    0%{
+        transform: translate(0px, 0px) rotate(0deg);                
+    }
+    25%{
+        transform: translate(0px, 400px) rotate(360deg);
+    }
+    50%{
+        transform: translate(750px, 400px) rotate(0deg);
+    }
+    75%{
+        transform: translate(750px, 0px) rotate(360deg);
+    }
+    100%{
+        transform: translate(0px, 0px) rotate(0deg);                
+    }
+}
+
+.animation img{
+	width: 150px;
+	height: 150px;
+}
+
+
+
+
 
 
