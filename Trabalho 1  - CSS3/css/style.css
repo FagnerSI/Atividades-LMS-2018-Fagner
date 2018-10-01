@@ -54,17 +54,14 @@
 	visibility: visible;
 }
 
-.content {
-	overflow: hidden;
+.content ul{
+	list-style-type: none;
 }
 
 .menu-bar {		
-	float: left;
-	overflow: auto;	
-	max-height: 90vh;    
+	float: left; 
 	width: 15%;
-	box-shadow: 0px 2px 5px 2px rgb(150,150, 150);
-	list-style-type: none;
+	box-shadow: 0px 2px 5px 2px rgb(150,150, 150);	
 	background: rgb(240, 240, 240, 0.5);
 }
 
@@ -108,7 +105,6 @@
 
 .info-bar ul{
 	margin-top: 10px;
-	list-style-type: none;
 }
 
 .info-bar ul li{
@@ -149,6 +145,40 @@
 	height: 150px;
 }
 
+@media screen and (max-width:600px){
+
+	 .menu-bar {		
+		float: left; 
+		width: 100%;
+	 }
+
+	 .info-bar {
+		float: left;
+		width: 100%;
+		margin-top: 50px;
+	}
+
+	@keyframes walk{
+    0%{
+        transform: translate(0px, 0px) rotate(0deg);                
+    }
+    25%{
+        transform: translate(0px, 100px) rotate(360deg);
+    }
+    50%{
+        transform: translate(400px, 100px) rotate(0deg);
+    }
+    75%{
+        transform: translate(400px, 0px) rotate(360deg);
+    }
+    100%{
+        transform: translate(0px, 0px) rotate(0deg);                
+    }
+}
+ 
+
+
+}
 
 
 
