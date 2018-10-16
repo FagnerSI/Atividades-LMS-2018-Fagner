@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+<meta charset="UTF-8">
+<title>Atividade 5</title>
+<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+
+<header class="header">
+    <span class="menu-sanduiche">&#9776</span>
+    <h1>Titulo</h1>
+</header>
+<nav class="menu-lateral">
+    <h2>MENU</h2>
+    <ul>
+        <li class="">Item 1</li>
+        <li class="">Item 2</li>
+        <li class="">Item 3</li>
+        <li class="">Item 4</li>
+        <li class="">Item 5</li>
+    </ul>
+</nav>
+<div class="conteudo">
+
+    <div class="acordeon">
+        Acordeon <span class="icon">+</span>
+    </div>
+    <div class="painel">
+        <p>Loremi psum dolor sit amet consectetur adipisicing elit.
+            Possimus ad, expedita molestiae blanditiis, facere nobis rerum,
+            sunt dicta accusantium incidunt labore culpa esse non commodi quod
+            exercitationem ducimus repudiandae voluptatem.
+        </p>
+        <p>Loremi psum dolor sit amet consectetur adipisicing elit.
+            Possimus ad, expedita molestiae blanditiis, facere nobis rerum,
+            sunt dicta accusantium incidunt labore culpa esse non commodi quod
+            exercitationem ducimus repudiandae voluptatem.
+        </p>
+        <p>Loremi psum dolor sit amet consectetur adipisicing elit.
+            Possimus ad, expedita molestiae blanditiis, facere nobis rerum,
+            sunt dicta accusantium incidunt labore culpa esse non commodi quod
+            exercitationem ducimus repudiandae voluptatem.
+        </p>
+        <p>Loremi psum dolor sit amet consectetur adipisicing elit.
+            Possimus ad, expedita molestiae blanditiis, facere nobis rerum,
+            sunt dicta accusantium incidunt labore culpa esse non commodi quod
+            exercitationem ducimus repudiandae voluptatem.
+        </p>
+        <p>Loremi psum dolor sit amet consectetur adipisicing elit.
+            Possimus ad, expedita molestiae blanditiis, facere nobis rerum,
+            sunt dicta accusantium incidunt labore culpa esse non commodi quod
+            exercitationem ducimus repudiandae voluptatem.
+        </p>
+        <p>Loremi psum dolor sit amet consectetur adipisicing elit.
+            Possimus ad, expedita molestiae blanditiis, facere nobis rerum,
+            sunt dicta accusantium incidunt labore culpa esse non commodi quod
+            exercitationem ducimus repudiandae voluptatem.
+        </p>
+        <p>Loremi psum dolor sit amet consectetur adipisicing elit.
+            Possimus ad, expedita molestiae blanditiis, facere nobis rerum,
+            sunt dicta accusantium incidunt labore culpa esse non commodi quod
+            exercitationem ducimus repudiandae voluptatem.
+        </p>
+        <p>Loremi psum dolor sit amet consectetur adipisicing elit.
+            Possimus ad, expedita molestiae blanditiis, facere nobis rerum,
+            sunt dicta accusantium incidunt labore culpa esse non commodi quod
+            exercitationem ducimus repudiandae voluptatem.
+        </p>
+        <p>Loremi psum dolor sit amet consectetur adipisicing elit.
+            Possimus ad, expedita molestiae blanditiis, facere nobis rerum,
+            sunt dicta accusantium incidunt labore culpa esse non commodi quod
+            exercitationem ducimus repudiandae voluptatem.
+        </p>
+    </div>
+</div>
+
+
+<script>
+    let menu_sanduiche = document.querySelector(".menu-sanduiche");
+    let menu_lateral = document.querySelector(".menu-lateral");
+    let head = document.querySelector(".header");
+    let conteudo = document.querySelector(".conteudo");
+    let plus = document.querySelector(".acordeon");
+    let painel = document.querySelector(".painel");
+
+    menu_sanduiche.addEventListener("click", function () {
+        menu_lateral.classList.toggle("move");
+        head.classList.toggle("move-ative");
+        conteudo.classList.toggle("move-ative-conteudo");
+
+    });
+
+    plus.addEventListener("click", function () {
+        painel.classList.toggle("ative");
+    });
+
+</script>
+
+</body>

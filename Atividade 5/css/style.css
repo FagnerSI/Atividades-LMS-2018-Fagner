@@ -1,0 +1,125 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+.header {
+	background-color: rgb(0, 0, 130);
+	float: right;
+	width: 85vw;	
+}
+
+.header h1{
+	display: inline-block;
+	color: white;
+	font-size: 30px;
+	padding: 10px
+}
+
+.menu-sanduiche{
+	visibility: hidden;
+	cursor: pointer;
+	user-select: none;
+	padding: 10px;
+	padding-left: 30px;
+	font-size: 30px;
+	color: white;			
+}
+
+.menu-lateral{
+	position: fixed;
+	float: left; 
+	width: 15vw;
+	height: 100vh;	
+	box-shadow: 0px 1px 10px rgb(0, 0, 133);
+	background:rgb(0, 0, 80);
+	color: white;
+	cursor: pointer;
+	overflow: hidden;
+}
+.menu-lateral h2{
+	padding: 18px;
+	font-size: 15px;
+}
+.menu-lateral ul{
+	list-style-type: none;
+}
+.menu-lateral ul li{
+	padding: 10px;
+}
+.menu-lateral ul li:hover{
+	background-color: rgb(0, 0, 130);
+}
+.conteudo{
+	float: right;
+	width: 85vw;
+}
+
+.acordeon {
+	cursor: pointer;
+	margin:  40px 40px 0px 40px; 
+	padding: 10px;
+	background-color: rgb(232, 232, 232);
+}
+.acordeon .icon{
+	float: right;		
+	font-size: 20px;	
+}
+
+.painel{
+	border: 0.6px solid silver;
+	margin: 0px 40px;	
+	text-align: justify; 
+	overflow: auto;  
+	max-height: 0;	
+	transition: max-height 1000ms ease-in;
+}
+
+.painel p {
+	padding: 20px;
+}
+
+
+.acordeon:hover {
+	background-color: rgb(190, 190, 190);
+}
+
+@media screen and (max-width: 480px){
+
+	.header{
+		width: 100vw;
+		transition: width 200ms;
+	}
+	.menu-sanduiche{
+		visibility: visible;				
+	}
+	.menu-lateral{		
+		width: 0;
+		transition: width 200ms;			
+	}
+
+	.menu-lateral h2{
+		visibility: hidden;		
+	}
+	.conteudo {
+		width: 100vw;
+		transition: width 200ms;
+	}
+
+}
+
+.move { 	
+	width: 15vw;
+}
+
+.move-ative {
+	width: 85vw;
+}
+
+.move-ative-conteudo {
+	width: 85vw;
+}
+
+.ative {
+	max-height: 50vh;	
+}
