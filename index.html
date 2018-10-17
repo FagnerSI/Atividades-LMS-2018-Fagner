@@ -13,55 +13,72 @@
     }
 
     body {
-
-    }
+        background-color: #111;	
+	font-family: OpenSansLight, Helvetica Neue, Helvetica, Arial, sans-serif;	
+    } 
     .border {
+        padding-top: 30px;
         margin: auto;
-        margin-top: 30px;
-        box-shadow: 2px 2px 2px rgb(133, 133, 133);
-        background-color: rgb(240, 240, 240);
+        display: auto;
+        background-color: #111;
         height: 80vh;
         width: 65vw;
-        border-radius: 5px; 
+       
     }
 
-     .border h1{      
+     .header h1{      
        padding: 20px;
        text-align: center;
-       background-color: rgb(100, 100, 100);
+       background-image: url('https://pages-themes.github.io/midnight/assets/images/nav-bg.gif');
        color: white;
-       border-radius: 5px 5px 0px 0px; 
+       border-bottom: 5px solid #ffcc00;
+       
     }
 
-    .border h2{      
-       padding: 10px;
-       text-align: center;       
-       color: rgb(60, 60, 60);       
+    .border h2{       
+       display: inline-block;    
+       padding: 10px 60px;
+       margin-top: 20px;
+       margin-bottom: 20px;
+       font-size: 20px;
+       text-align: left;
+       border-left: 8px solid #ffcc00;       
+       border-bottom: 1px dashed #ffcc00;       
+       color: #fff;
+       border-radius: 2px;
     }
 
-    .content{
-        text-align: center;
-        margin-top: 10px;
+    .content{            
         display: inline-block;
         padding: 20px;
     }
     .content a{
-        border-radius: 5px; 
+	border-radius: 2px;
         text-decoration: none;
-        background-color: rgb(100, 100, 100);
-        box-shadow: 2px 2px 2px rgb(133, 133, 133);
-        color: #fff;
+        border:  #ffcc00 solid 0.5px;
+        color:  #ffcc00;
         padding: 15px;
         font-size: 15px;
+	
+    }
+
+    .content a:hover{
+        background-color: #ffcc00;
+	color: #222;
+	font-weight: bold;
     }
 
 </style>
 <body>
+    <header class="header">
+	<h1>Painel de Controle</h1>
+    </header>
+  
 
     <div class="border">
-        <h1>Painel de Controle</h1>
+        
         <h2>Atividades</h2>
-        <hr/>
+        <br>       
         <div class="content">
             <a href="/Atividades-LMS-2018-Fagner/Atividade%201/">ATIVIDADE 1</a>            
         </div> 
@@ -79,7 +96,7 @@
         </div> 
         <br>
         <h2>Trabalhos</h2>  
-        <hr/> 
+        <br>
 	<div class="content">
             <a href="/Atividades-LMS-2018-Fagner/Trabalho%201%20%20-%20CSS3/">TRABALHO 1</a>            
         </div>        

@@ -113,7 +113,7 @@
 
 .animation {
 	float: left;
-	margin: 20px;
+	margin: 10px;
 	position: relative;
 	width: 150px;
 	height: 150px;
@@ -127,10 +127,10 @@
         transform: translate(0px, 0px) rotate(0deg);                
     }
     25%{
-        transform: translate(0px, 400px) rotate(360deg);
+        transform: translate(0px, 380px) rotate(360deg);
     }
     50%{
-        transform: translate(750px, 400px) rotate(0deg);
+        transform: translate(750px, 380px) rotate(0deg);
     }
     75%{
         transform: translate(750px, 0px) rotate(360deg);
@@ -141,8 +141,8 @@
 }
 
 .animation img{
-	width: 150px;
-	height: 150px;
+	width: 130px;
+	height: 130px;
 }
 
 @media screen and (max-width:600px){
