@@ -1,0 +1,136 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-image: url(https://consultorasdesucesso.com/wp-content/uploads/2016/04/whatsapp-wallpaper.png);
+}
+.contaier {
+    font-family: Ubuntu,Cantarell,”Helvetica Neue”,sans-serif;   
+    background-color: aliceblue;
+    margin: auto;
+    width: 900px;
+    height: 100vh; 
+}
+
+.header{     
+    background-color: rgb(0, 104, 86);    
+}
+
+.header .title{  
+   display: inline-block; 
+   font-weight: bold;
+   padding:15px;
+   font-size: 25px; 
+   color: white;
+}
+
+.header .login {  
+    padding:15px;
+    float: right;   
+    font-size: 25px; 
+    color: white;
+ }
+
+ .header .login:hover {  
+    background-color: rgb(1, 59, 50);  
+ }
+
+ .menu-lateral {
+     overflow: auto;
+     float: left;
+     height: 90.8vh;
+     min-width: 25%;
+     box-shadow: 0px 0px 10px 1px rgb(100, 100, 86);
+     background-color: whitesmoke;
+ }
+
+ .menu-lateral .menu-header {  
+    font-size: 15px;
+    padding: 13px;
+    color: rgb(2, 143, 119);
+    text-align: center;
+ }
+
+ .menu-lateral ul {
+     list-style: none;
+ }
+
+ .menu-lateral ul li {
+     padding: 15px;
+     color: rgb(80, 80, 80);
+ }
+
+ .menu-lateral ul li:hover {
+    background-color: rgb(180, 180, 180, 0.2);
+}
+/* JS */
+.menu-lateral ul li img{
+   height: 25px;
+   width: 25px;
+}
+
+/* CHAT */
+
+ .chat{
+    float: right;
+    width: 75%;
+    height: 90.8vh;
+    position: relative;
+ }
+
+ .chat .header-chat {
+     background-color: rgb(2, 143, 119);    
+     text-align: center;
+ }
+
+ .chat .header-chat .user-chat {
+     display: inline-block;
+     font-size: 20px;
+     color: white;
+     padding: 10px;
+ }
+
+.chat .body-chat{
+     height: 70vh;
+     padding: 20px;
+     color: rgb(80, 80, 80);
+}
+ 
+.chat .msg-chat {    
+    position: absolute;
+    bottom: 0px;        
+    background-color: rgb(2, 143, 119);    
+    padding: 10px;
+    padding-left: 53px;
+    padding-right: 53px;
+    text-align: center;
+    border: 1.4px solid rgb(2, 143, 119); 
+}
+
+.chat .msg-chat .input-msg{  
+    width: 500px;
+    box-sizing: border-box;  
+    border: none;
+    border-radius: 10px 0px 0px 10px;
+    font-size: 15px;
+    padding: 10px;
+    color: rgb(80, 80, 80);
+}
+
+.chat .msg-chat .btn-msg{  
+    box-sizing: border-box;
+    border: none;
+    font-size: 15px;
+    padding: 10px;
+    border-radius: 0px 10px 10px 0px;
+    color:rgb(2, 143, 119); 
+    background: white;
+    cursor: pointer;
+}
+
+.chat .msg-chat .btn-msg:hover{        
+    color:white;
+    background-color: rgb(0, 104, 86);    
+    
+}
