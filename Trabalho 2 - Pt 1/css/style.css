@@ -110,6 +110,25 @@ body {
      box-sizing: border-box;
      
 }
+
+.chat .body-chat div {   
+    max-width: 250px;  
+    border-radius: 5px 5px;
+    border: solid 0.6px rgb(100, 100, 86, 0.4);
+    box-shadow: 1px 1px 10px 1px rgb(100, 100, 86, 0.4);
+    margin: 15px;
+    padding: 10px;
+
+}
+.chat .body-chat div span { 
+     color:rgb(0, 104, 86);
+     font-weight: bold;      
+}
+
+.chat .body-chat div p {
+    max-width: 250px;  
+    padding: 10px;
+}
  
 .chat .msg-chat {  
      

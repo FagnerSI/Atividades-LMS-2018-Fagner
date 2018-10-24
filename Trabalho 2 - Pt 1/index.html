@@ -18,57 +18,127 @@
                 Grupos
             </div>
             <ul class="list-group">
-                               
+                <!-- grupo aqui -->
             </ul>
         </div>
         <div class="chat">
             <div class="header-chat">
-                <span class="user-chat"></span>
+                <span class="user-chat"> <!-- Titlo de grupo aqui --></span>
             </div>
             <div class="body-chat">
-                
-
-            </div>=
+                <!-- mensagens do grupo aqui -->
+            </div>
             <div class="msg-chat">
                 <input class="input-msg" type="text"><button class="btn-msg" type="text">Enviar</button>
             </div>
         </div>
     </div>
     <script>
-        let groups = '[{"grupo": "Grupo da família!",'+
-                     '"mensagens": [{"usuario": "joao03","texto": "Tudo bem?"},{"usuario": "victor23", "texto": "Tudo Tranqs"},{"usuario": "joao03", "texto": "Que bom"}]},'+
-                     '{"grupo": "Churrascão no domingão",'+
-                     '"mensagens": [{ "usuario": "maria2000", "texto": "Na paz?"},{"usuario": "victor23","texto": "Show"},{"usuario": "maria2000", "texto": "Que bom"}]},'+
-                     '{"grupo": "Só topzera",'+
-                     '"mensagens":[{ "usuario": "victor03","texto": "Bom?"},{ "usuario": "robson_alves","texto": "Bom"}, {"usuario": "victor03","texto": "Que bom"}]}'+
-                     ']';
-
-         let groupsJason = JSON.parse(groups);
-
-
         
+        let jsonGroups = {
+            grupos: [
+                {
+                    grupo: "Grupo da família!",
+                    mensagens: [
+                        {
+                            usuario: "joao03",
+                            texto: "Tudo bem?"
+                        },
+                        {
+                            usuario: "victor23",
+                            texto: "Tudo Tranqs"
+                        },
+                        {
+                            usuario: "joao03",
+                            texto: "Que bom"
+                        },
+                        {
+                            usuario: "maria2000",
+                            texto: "Que bom!"
+                        }
+                    ]
+                },
+                {
+                    grupo: "Churrascão no domingão",
+                    mensagens: [
+                        {
+                            usuario: "maria2000",
+                            texto: "Na paz?"
+                        },
+                        {
+                            usuario: "victor23",
+                            texto: "Show"
+                        },
+                        {
+                            usuario: "maria2000",
+                            texto: "Que bom"
+                        }
+                    ]
+                },
+                {
+                    grupo: "Só topzera",
+                    mensagens: [
+                        {
+                            usuario: "victor03",
+                            texto: "Bom?"
+                        },
+                        {
+                            usuario: "robson_alves",
+                            texto: "Bom"
+                        }
+                    ]
+                }
+            ]
+        }
         let list_group = document.querySelector(".list-group");
-        
-        function createElementoGroup(title_group){            
+        let body_chat = document.querySelector(".body-chat");
+
+        function createElementoGroup(title_group) {
             let li = document.createElement("li");
-            let img = document.createElement("img");            
-            img.src="https://cdn.pixabay.com/photo/2016/11/14/17/39/person-1824147_960_720.png";            
+            let img = document.createElement("img");
+            img.src = 'img/user.png';
             let text = document.createTextNode(title_group);
             li.appendChild(img);
             li.appendChild(text);
-            list_group.appendChild(li);        
+            list_group.appendChild(li);
         }
 
-        function addGroup(){
-            for(let i = 0; i < groups.length; i++){
-               createElementoGroup(groupsJason[i].grupo);                
+        function createElementoMsg(title_chat, message) {
+
+            let painel = document.createElement("div");
+            let title = document.createElement("span");
+            let body = document.createElement("p");
+
+            let user_msg = document.createTextNode(title_chat);
+            let msg = document.createTextNode(message);
+
+            title.appendChild(user_msg);
+            body.appendChild(msg);
+
+            painel.appendChild(title);
+            painel.appendChild(body);
+
+            body_chat.appendChild(painel);
+
+        }
+
+        function addGroup() {
+            for (let i = 0; i < jsonGroups.grupos.length; i++) {
+                createElementoGroup(jsonGroups.grupos[i].grupo);
             }
         }
-        
-        addGroup()
-        
-       
-        
+
+        function addMsg(){
+            for(let i = 0; i < jsonGroups.grupos.length; i++){
+                let msgs = jsonGroups.grupos[i].mensagens;                               
+                for(let i = 0; i < msgs.length; i++){
+                    createElementoMsg(msgs[i].usuario, msgs[i].texto);
+                }
+            }   
+        }
+
+        addGroup();
+        addMsg();
 
     </script>
 </body>
