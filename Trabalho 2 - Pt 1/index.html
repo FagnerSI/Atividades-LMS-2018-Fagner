@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="css/style.css">
-    <title>Document</title>
+    <title>Trabalho 2</title>
 </head>
 
 <body>
@@ -15,29 +15,62 @@
         </header>
         <div class="menu-lateral">
             <div class="menu-header">
-                Contatos
+                Grupos
             </div>
-            <ul>
-                <li>
-                    <img src="https://cdn.pixabay.com/photo/2016/11/14/17/39/person-1824147_960_720.png" alt="">
-                    <span>Pop</span>
-                </li>
-                
+            <ul class="list-group">
+                               
             </ul>
         </div>
         <div class="chat">
             <div class="header-chat">
-                <span class="user-chat">Fulano</span>
+                <span class="user-chat"></span>
             </div>
             <div class="body-chat">
+                
 
-            </div>
+            </div>=
             <div class="msg-chat">
-                <input class="input-msg" type="text">
-                <button class="btn-msg" type="text">Enviar</button>
+                <input class="input-msg" type="text"><button class="btn-msg" type="text">Enviar</button>
             </div>
         </div>
     </div>
+    <script>
+        let groups = '[{"grupo": "Grupo da família!",'+
+                     '"mensagens": [{"usuario": "joao03","texto": "Tudo bem?"},{"usuario": "victor23", "texto": "Tudo Tranqs"},{"usuario": "joao03", "texto": "Que bom"}]},'+
+                     '{"grupo": "Churrascão no domingão",'+
+                     '"mensagens": [{ "usuario": "maria2000", "texto": "Na paz?"},{"usuario": "victor23","texto": "Show"},{"usuario": "maria2000", "texto": "Que bom"}]},'+
+                     '{"grupo": "Só topzera",'+
+                     '"mensagens":[{ "usuario": "victor03","texto": "Bom?"},{ "usuario": "robson_alves","texto": "Bom"}, {"usuario": "victor03","texto": "Que bom"}]}'+
+                     ']';
+
+         let groupsJason = JSON.parse(groups);
+
+
+        
+        let list_group = document.querySelector(".list-group");
+        
+        function createElementoGroup(title_group){            
+            let li = document.createElement("li");
+            let img = document.createElement("img");            
+            img.src="https://cdn.pixabay.com/photo/2016/11/14/17/39/person-1824147_960_720.png";            
+            let text = document.createTextNode(title_group);
+            li.appendChild(img);
+            li.appendChild(text);
+            list_group.appendChild(li);        
+        }
+
+        function addGroup(){
+            for(let i = 0; i < groups.length; i++){
+               createElementoGroup(groupsJason[i].grupo);                
+            }
+        }
+        
+        addGroup()
+        
+       
+        
+
+    </script>
 </body>
 
 </html>
