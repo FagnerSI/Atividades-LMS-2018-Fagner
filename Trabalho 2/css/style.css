@@ -68,6 +68,7 @@ body {
      padding: 15px;
      color: rgb(80, 80, 80);
      text-align: center;
+     cursor: pointer;
  }
 
  .menu-lateral ul li:hover {
@@ -118,8 +119,11 @@ body {
     box-shadow: 1px 1px 10px 1px rgb(100, 100, 86, 0.4);
     margin: 15px;
     padding: 10px;
+    background-color: white;    
 
 }
+
+
 .chat .body-chat div span { 
      color:rgb(0, 104, 86);
      font-weight: bold;      
