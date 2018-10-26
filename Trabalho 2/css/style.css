@@ -15,11 +15,11 @@ body {
 }
 
 .header{     
-    background-color: rgb(0, 104, 86);   
-    height: 10vh 
+    background-color: rgb(0, 104, 86);  
+    height: 10vh;
 }
 
-.header .title{  
+.header .title{ 
    display: inline-block; 
    font-weight: bold;
    padding:15px;
@@ -28,7 +28,8 @@ body {
 }
 
 .header .login {  
-    border: solid 2px rgb(0, 104, 86);  
+    border: solid 2px rgb(0, 104, 86);
+    background-color: rgb(0, 104, 86);
     padding:15px;
     float: right;   
     font-size: 25px; 
@@ -99,7 +100,7 @@ body {
      text-align: center;
  }
 
- .chat .header-chat .user-chat {    
+ .chat .header-chat .group-chat {    
      color: white;     
  }
 
@@ -110,6 +111,10 @@ body {
      color: rgb(80, 80, 80);
      box-sizing: border-box;
      
+}
+.chat .body-chat img{    
+    display: block;
+    margin: auto;      
 }
 
 .chat .body-chat div {   
