@@ -3,23 +3,23 @@
     padding: 0;
 }
 body {
-    background-image: url(https://consultorasdesucesso.com/wp-content/uploads/2016/04/whatsapp-wallpaper.png);
+    background-image: url(https://consultorasdesucesso.com/wp-content/uploads/2016/04/whatsapp-wallpaper.png); */
 }
 .contaier {
     font-family: Ubuntu,Cantarell,”Helvetica Neue”,sans-serif;   
     background-color: aliceblue;
     margin: auto;
     width: 900px;
-    height: 100vh; 
-    
+    height: 100vh;   
 }
 
-.header{     
+.header{       
     background-color: rgb(0, 104, 86);  
-    height: 10vh;
+    height: 10vh;  
+    overflow: hidden; 
 }
 
-.header .title{ 
+.header .title{   
    display: inline-block; 
    font-weight: bold;
    padding:15px;
@@ -28,21 +28,41 @@ body {
 }
 
 .header .login {  
-    border: solid 2px rgb(0, 104, 86);
-    background-color: rgb(0, 104, 86);
-    padding:15px;
-    float: right;   
-    font-size: 25px; 
-    color: white;
+    float: right;
+    border: none;
+    font-size: 25px;
+    padding: 17px;   
+    color:white;
+    background: rgb(0, 104, 86);  
+    cursor: pointer;
  }
+
+ .login-ativo {  
+    float: right;
+    border: none;
+    font-size: 15px;
+    padding: 10px;
+    margin-top: 15px;
+    margin-right: 20px;
+    color: white;
+    background: rgb(0, 143, 119); 
+    cursor: pointer;
+ }
+
+ .login-ativo:hover {  
+    color: rgb(2, 143, 119); 
+    background: white;
+ }
+
+
 
  .header .login:hover {  
     background-color: rgb(1, 59, 50);  
-    border: solid 2px rgb(1, 59, 50);
+    color: white;
  }
 
  .menu-lateral {
-     overflow: auto;
+     position: relative;     
      float: left;
      height: 90vh;
      width: 25%;
@@ -53,13 +73,14 @@ body {
  .menu-lateral .menu-header {  
     font-size: 15px;
     padding: 13px;
-    height: 2vh;
-     
+    height: 2vh;     
     color: rgb(2, 143, 119);
     text-align: center;
  }
 
  .menu-lateral ul {
+     overflow: auto;
+     height: 75vh;
      list-style: none;
      display: auto;
  }
@@ -82,7 +103,43 @@ body {
    height: 25px;
    width: 25px;
 }
+.menu-lateral .menu-gp {
+    position: absolute;
+    background: rgb(0, 104, 86);  
+    padding: 10px;
+    box-sizing: border-box;
+    width: 100%;
+    bottom: 0;
+}
 
+.menu-lateral .menu-gp .menu-input {
+    width: 45%;     
+    border: none;
+    border-radius: 10px 0px 0px 10px;
+    font-size: 15px;
+    padding: 10px;
+    color: rgb(80, 80, 80);
+}
+
+.menu-lateral .menu-gp .menu-input-id {
+    width: 15%;     
+    border: none;
+    border-radius: 10px;
+    font-size: 15px;
+    padding: 10px;
+    color: rgb(80, 80, 80);
+}
+
+.menu-lateral .menu-gp .menu-btn {
+    border: none;
+    box-sizing: border-box;
+    border-radius: 0px 10px 10px 0px;
+    font-size: 15px;
+    padding: 10px;
+    background-color: white;
+    color:rgb(0, 104, 86);
+    cursor: pointer;
+}
 /* CHAT */
 
  .chat{
@@ -118,13 +175,25 @@ body {
 }
 
 .chat .body-chat div {   
-    max-width: 250px;  
+    width: 250px;  
     border-radius: 5px 5px;
     border: solid 0.6px rgb(100, 100, 86, 0.4);
     box-shadow: 1px 1px 10px 1px rgb(100, 100, 86, 0.4);
     margin: 15px;
     padding: 10px;
     background-color: white;    
+
+}
+
+.msg-user {   
+    float: right;
+    width: 250px;  
+    border-radius: 5px 5px;
+    border: solid 0.6px rgb(100, 100, 86, 0.4);
+    box-shadow: 1px 1px 10px 1px rgb(100, 100, 86, 0.4);
+    margin: 15px;
+    padding: 10px;
+    background-color: aquamarine;    
 
 }
 
@@ -139,8 +208,7 @@ body {
     padding: 10px;
 }
  
-.chat .msg-chat {  
-     
+.chat .msg-chat {       
     position: absolute;
     bottom: 0px;        
     background-color: rgb(2, 143, 119);    
@@ -148,7 +216,8 @@ body {
     padding-left: 53px;
     padding-right: 53px;
     text-align: center;
-    border: 1.4px solid rgb(2, 143, 119); 
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .chat .msg-chat .input-msg{  
@@ -162,11 +231,9 @@ body {
 }
 
 .chat .msg-chat .btn-msg{  
-    box-sizing: border-box;
     border: none;
     font-size: 15px;
     padding: 10px;
-    padding-right: 13.7px;
     border-radius: 0px 10px 10px 0px;
     color:rgb(2, 143, 119); 
     background: white;
@@ -177,4 +244,63 @@ body {
     color:white;
     background-color: rgb(0, 104, 86);    
     
+}
+
+.modal{ 
+    font-family: Ubuntu,Cantarell,”Helvetica Neue”,sans-serif;   
+    position: absolute;
+    top: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgb(0,0,0,0.8);
+    display: none;
+}
+
+.modal .painel-modal{ 
+    box-sizing: border-box;
+    padding: 40px;
+    text-align: center;
+    position: absolute;
+    height: 200px;
+    width: 400px;
+    background-color: whitesmoke;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+.modal .painel-modal .input-user{  
+    width: 90%;
+    box-sizing: border-box;  
+    border: solid 0.6px rgb(0, 104, 86);
+    border-radius: 10px;
+    font-size: 15px;
+    margin: 15px;
+    padding: 10px;
+    color: rgb(80, 80, 80);
+}
+
+.modal .painel-modal .btn-user{  
+    border: none;
+    font-size: 15px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    color:white;
+    background-color: rgb(0, 104, 86); 
+    cursor: pointer;
+}
+
+.modal-ativo{
+    display: block;
+}
+
+.user-name{
+    float: right;
+    border: none;
+    margin-top: 10px;
+    padding: 10px;   
+    color:white;
+    background: rgb(0, 104, 86);  
+    cursor: pointer;
 }

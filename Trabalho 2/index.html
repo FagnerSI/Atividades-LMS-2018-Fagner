@@ -10,8 +10,11 @@
 <body>
     <div class="contaier">
         <header class="header">
-            <span class="title">Tagarelando</span>
-            <span class="login">Entrar</span>
+            <span class="title">Tagarelando</span>            
+            <button class="login">Entrar</button>
+            <span class="user-name">
+                    <!-- user logado aqui -->
+            </span>
         </header>
         <div class="menu-lateral">
             <div class="menu-header">
@@ -20,8 +23,11 @@
             <ul class="list-group">                     
                 <!-- grupo aqui -->
                 <li>Aguarde o Carregmento ...</li>
-
             </ul>
+            <div class="menu-gp">
+                <input type="text" placeholder="Id" class="menu-input-id">
+                <input type="text" placeholder="Nome" class="menu-input"><button class="menu-btn"> +g</button>
+            </div>            
         </div>
         <div class="chat">
             <div class="header-chat">
@@ -33,8 +39,15 @@
                   
             </div>
             <div class="msg-chat">
-                <input class="input-msg" type="text"><button class="btn-msg" type="text">Enviar</button>
+                <input class="input-msg" placeholder="Digite sua mensagem" type="text"><button class="btn-msg" type="text">Enviar</button>
             </div>
+        </div>
+    </div>
+    <div class="modal">
+        <div class="painel-modal">
+          <h2>Login</h2>
+          <input class="input-user" type="text">
+          <button class="btn-user" type="text">Enviar</button>   
         </div>
     </div>
     <script src="js/main.js">
