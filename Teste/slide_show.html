@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        .slide-show{
+            position: relative;
+            margin: auto;
+            height: 600px;
+            width: 600px;
+            box-sizing: border-box;           
+        }
+
+        .seta {
+            position: absolute;
+            top: 50%;           
+            transform: translate(0, -50%);
+            font-size: 50px;
+            padding: 10px;
+            color: antiquewhite;
+            background: rgba(0,0, 0, 0.5);
+            cursor: pointer;
+        }
+        .seta:hover {            
+            color: rgb(0, 0, 0);
+            background: rgba(112, 112, 112, 0.4);            
+        }
+        .esquerda{
+            border-radius: 0 10px 10px 0;
+        }
+        .direita {
+            right: 0;
+            border-radius: 10px 0 0 10px;
+        }
+        .slide-show .overlay{
+            position: absolute;
+            height: 40px;
+            background: rgba(0,0, 0, 0.5);
+            padding: 10px;
+            bottom: 0;
+            width: 100%;
+            text-align: center;
+            color: antiquewhite;
+            box-sizing: border-box;
+        }
+        .slide-show img{
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-show">
+        <img src="" alt="">
+        <span class="seta esquerda">&lt</span>
+        <span class="seta direita">&gt</span>
+        <div class="overlay">
+
+        </div>
+    </div>
+    <script>
+    
+         let url = "https://jsonplaceholder.typicode.com/photos";
+        //  let data = ["img/1.jpg", "img/2.jpg", "img/3.png", "img/4.jpg"];
+         let data = null;
+         let image = document.querySelector(".slide-show img");
+         let desc = document.querySelector(".slide-show .overlay");
+         let corrent_slide = 0;
+         const limete = 10;
+
+
+        function setImgSlide(i){
+            image.src = data[i].url;
+            desc.innerHTML = data[i].title;
+        }
+       
+        function next(){
+            corrent_slide++;
+
+            if(corrent_slide >= limete){
+                corrent_slide = 0;
+            }
+            setImgSlide(corrent_slide);
+        }
+
+        function previous(){
+            corrent_slide--;
+
+            if(corrent_slide < 0){
+                corrent_slide = limete - 1;
+            }
+            setImgSlide(corrent_slide);
+
+        }
+
+         document.querySelector(".seta.direita").addEventListener("click", next);
+         document.querySelector(".seta.esquerda").addEventListener("click", previous);           
+
+         function getImageHttp (){
+             let xhttp = new XMLHttpRequest();
+             xhttp.onreadystatechange = function(){
+                 if(xhttp.readyState == 4){
+                   data = JSON.parse(xhttp.responseText);                   
+                   setImgSlide(0);
+                 }
+                
+             }
+             xhttp.open("GET", url, true);
+             xhttp.send();
+         }
+        getImageHttp();
+    
+    </script>
+
+</body>
+
+</html>

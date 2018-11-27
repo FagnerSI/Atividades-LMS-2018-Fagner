@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+        margin: 0;
+        padding: 0;
+    }
+
+    .head {        
+        width: 100vw;
+        background-color: blue;
+    }
+
+    .form{
+        padding: 20px;
+    }
+
+    .form input{
+        border: none;
+        padding: 5px;
+        font-size: 20px;
+    }
+    .form button{
+        border: none;
+        padding: 5px;
+        font-size: 20px;
+        background-color: white;
+    }
+    .to-do{
+        box-sizing: border-box;
+        text-align: center;
+    }
+    .to-do .card{        
+        width: 300px;
+        background-color: blueviolet;
+        height: 100px;
+        display: inline-block;
+        margin: 20px;
+        padding: 20px;
+        color: beige;        
+    }
+
+    </style>
+</head>
+
+<body>
+
+    <header class="head">
+        <form class="form" action="">
+            <input type="text"><button type="submit">Enviar</button>
+        </form>
+    </header>
+    <div class="to-do">
+
+    </div>
+
+    <script>
+        let container = document.querySelector(".to-do")
+        let input_form = document.querySelector(".form input");
+
+        let url = "http://rest.learncode.academy/api/to-do/cards";
+
+        function createCard(data) {            
+            let data_text = data.text;
+            
+            let card = document.createElement("div");
+            let text_card = document.createTextNode(data_text);
+            
+            card.classList.add("card");
+            card.appendChild(text_card);
+            container.appendChild(card);
+        }
+
+        document.querySelector(".form button").addEventListener("click", function (e) {
+            event.preventDefault();
+            send_card(input_form.value);
+            input_form.value = ""; 
+            container.innerHTML = "";        
+            carregar_card();
+
+        });
+
+        function carregar_card(){
+            let xhttp = new XMLHttpRequest()
+            xhttp.onreadystatechange = function () {
+                if (xhttp.readyState == 4) {
+                    let data = JSON.parse(xhttp.responseText);
+                   
+                    data.forEach(createCard);
+                }
+            }
+            xhttp.open("GET", url, true);
+            xhttp.send()
+
+        }
+        
+
+       
+        function send_card(text_input) {
+
+            let xhttp = new XMLHttpRequest()
+            xhttp.onreadystatechange = function () {
+                if (xhttp.readyState == 4) {
+                    let data = JSON.parse(xhttp.responseText);
+                }
+            }
+            let card_text = {text:text_input}
+            xhttp.open("POST", url, true);
+            xhttp.setRequestHeader("Content-type", "application/json")
+            xhttp.send(JSON.stringify(card_text));
+
+        }
+
+
+    </script>
+</body>
+
+</html>

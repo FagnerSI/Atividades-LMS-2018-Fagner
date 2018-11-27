@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+    crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+    crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+
+    
+    <title>MagazineLive</title>
+</head>
+<body>
+    <nav class="navbar navbar-dark bg-dark">
+        <span class="text-info logo">MagazineLive</span>        
+        <div class="controls float-right">
+            <div id="car" class="dropdown">
+               <button class="btn btn-info dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <span class="fas fa-shopping-cart"></span> Carrinho
+              </button>
+              <div class="dropdown-menu text-center dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item btn-secondary" href="#">Action</a>
+                
+                <a class="btn btn-info" href="compras.html">
+                    Finalizar
+                </a>
+              </div>
+            </div>
+            <div id="create-account" class="dropdown">
+           <button class="btn btn-outline-info dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Criar conta
+           </button>
+           <form class="dropdown-menu p-4 dropdown-menu-right">             
+                <div class="form-group text-center">
+                    <span>Crie sua conta</span>
+                </div>
+                <div class="form-group">
+                    <label for="exampleDropdownFormEmail">Email</label>
+                    <input id="account-email" type="email" class="form-control" id="exampleDropdownFormEmail" placeholder="email@mail.com" required="true">
+                </div>
+                <div class="form-group">
+                    <label for="exampleDropdownFormPassword">Senha</label>
+                    <input id="account-senha" type="password" class="form-control" id="exampleDropdownFormPassword" placeholder="Digite uma senha" required="true" minlength="8" maxlength="16">
+                </div>        
+               
+                 <button id="btn-create" type="submit" class="btn btn-info">Criar conta</button>
+            </form>
+            </div>   
+            <div id="login" class="dropdown">
+            <button id="btn-entrar" class="btn btn-outline-info dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Entrar
+           </button>
+           <form class="dropdown-menu p-4 dropdown-menu-right">
+                <div class="form-group">
+                    <label for="exampleDropdownFormEmail">Email</label>
+                    <input id="login-email" type="email" class="form-control" id="exampleDropdownFormEmail" placeholder="email@mail.com" required="true">
+                </div>
+                <div class="form-group">
+                    <label for="exampleDropdownFormPassword">Senha</label>
+                    <input id="login-senha" type="password" class="form-control" id="exampleDropdownFormPassword" placeholder="Digite uma senha" required="true" minlength="8" maxlength="16">
+                </div>        
+               
+                 <button id="btn-login" type="submit" class="btn btn-info">Entrar</button>
+            </form>
+            </div> 
+        </div>
+        </nav>
+
+    <div class="container">
+        <div class="row">
+
+            <div class="col-sm-4">
+                <div class="card text-center border-info">
+                  <img class="card-img-top" src="https://a-static.mlcdn.com.br/618x463/notebook-samsung-expert-x50-intel-core-i7-8gb-1tb-led-156-full-hd-nvidia-geforce-2gb-windows-10/magazineluiza/135239000/14f021ad33f3d9a3035523240e8b5b3e.jpg">
+                  
+                  <div class="card-body">
+                    <h5 class="card-title">Notebook Samsung X50 - R$ 2.798,00</h5>
+                    <p>Notebook Samsung Exprt X50 Intel Core i7 8GB 1TB - LED 15,6” Full HD NVIDIA GeForce 2GB Windows 10...</p>
+                    <div class="row">
+                        <div class="col-sm-8">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">Qtd</span>                                       
+                                </div>
+                                <input type="number" class="form-control" min="1">
+                                <div class="input-group-append">
+                                    <button class="btn btn-info"type="button">
+                                        <span class="fas fa-shopping-cart"></span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="card text-center border-info" >
+                  <img class="card-img-top" src="https://a-static.mlcdn.com.br/1500x1500/notebook-dell-inspiron-i15-3576-a70-intel-core-i7-8gb-2tb-led-156-placa-de-video-2gb-windows-10/magazineluiza/218892800/9fd7885a4bdbe47f7d5290fe62c106b4.jpg" 
+                  alt="Notebook Dell Inspiron i15-3576-A70">
+                  
+                  <div class="card-body">
+                    <h5 class="card-title">Notebook Dell Inspiron i15-3576-A70 - R$ 3.198,00</h5>
+                    <p>Notebook Dell Inspiron i15-3576-A70 Intel Core i7 - 8GB 2TB LED 15,6” Placa de Vídeo 2GB Windows 10...</p>
+                    <div class="row">
+                        <div class="col-sm-8">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">Qtd</span>                                       
+                                </div>
+                                <input type="number" class="form-control" min="1">
+                                <div class="input-group-append">
+                                    <button class="btn btn-info"type="button">
+                                        <span class="fas fa-shopping-cart"></span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="card text-center border-info">
+                  <img class="card-img-top" src="https://a-static.mlcdn.com.br/618x463/notebook-dell-inspiron-i15-5570-b40c-intel-core-i7-8gb-2tb-led-156-full-hd-radeon-4gb-windows-10/magazineluiza/220922600/6248514784966f24b9e0b8c923b33a9b.jpg"
+
+                  alt="Notebook Samsung Expert x50">
+                  
+                  <div class="card-body">
+                    <h5 class="card-title">Dell Inspiron i15-5570-B40C Intel Core i7 - R$ 3.438,00</h5>
+                    <p>Notebook Dell Inspiron i15-5570-B40C Intel Core i7 - 8GB 2TB LED 15,6” Windows 10...</p>
+                    <div class="row">
+                        <div class="col-sm-8">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">Qtd</span>                                       
+                                </div>
+                                <input type="number" class="form-control" min="1">
+                                <div class="input-group-append">
+                                    <button class="btn btn-info"type="button">
+                                        <span class="fas fa-shopping-cart"></span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="card text-center border-info">
+                  <img class="card-img-top" src="https://static.acer.com/up/Resource/Acer/Laptops/Swift_3/Swift_3_2018_Miller/Image/20180813/Acer-Swift-3-SF314-55-SF314-55G-preview.png"
+                  alt="Notebook Samsung Expert x50">
+                  
+                  <div class="card-body">
+                    <h5 class="card-title">Notebook Acer Swift 3 - R$ 4.999,00</h5>
+                    <p>Notebook Acer Swift 3 SF315-52-58DU Intel Core i5-8250U 8GB + 16GB Optane 1TB HD 15.6" Windows 10...</p>
+                    <div class="row">
+                        <div class="col-sm-8">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">Qtd</span>                                       
+                                </div>
+                                <input type="number" class="form-control" min="1">
+                                <div class="input-group-append">
+                                    <button class="btn btn-info"type="button">
+                                        <span class="fas fa-shopping-cart"></span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="card text-center border-info">
+                  <img class="card-img-top" src="https://a-static.mlcdn.com.br/618x463/notebook-vaio-fit-15s-intel-core-i7-8gb-1tb-led-156-windows-10/magazineluiza/217301400/f5e5316a987670f2e3d5b433c151b471.jpg"
+                  alt="Notebook Vaio Fit">
+                  
+                  <div class="card-body">
+                    <h5 class="card-title">Notebook Vaio Fit  - R$ 2.699,00</h5>
+                    <p>Notebook Vaio Fit 15S Intel Core i7 7ª Geração i7-7500U - RAM DDR3L de 8GB  HD 1TB TELA LED de 15,6” Windows 10 Chumbo...</p>
+                    <div class="row">
+                        <div class="col-sm-8">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">Qtd</span>                                       
+                                </div>
+                                <input type="number" class="form-control" min="1">
+                                <div class="input-group-append">
+                                    <button class="btn btn-info"type="button">
+                                        <span class="fas fa-shopping-cart"></span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="card text-center border-info">
+                  <img class="card-img-top" src="https://a-static.mlcdn.com.br/618x463/notebook-acer-aspire-5-a515-51g-72db-intel-core-i7-8gb-1tb-led-156-full-hd-placa-de-video-2gb/magazineluiza/219124500/14cc062c95f87c76a143a8e4dbe2a773.jpg"
+                  alt="Notebook Vaio Fit">
+                  
+                  <div class="card-body">
+                    <h5 class="card-title">Notebook Acer Aspire 5 - R$ 3.149,00</h5>
+                    <p>Notebook Acer Aspire 5 A515-51G-72DB Intel Core i7 - RAM DDR4L 8GB 1TB LED 15,6 Full HD Placa de Vídeo 2GB...</p>
+                    <div class="row">
+                        <div class="col-sm-8">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">Qtd</span>
+                                </div>
+                                <input type="number" class="form-control" min="1">
+                                <div class="input-group-append">
+                                    <button class="btn btn-info"type="button">
+                                        <span class="fas fa-shopping-cart"></span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+
+         </div>        
+
+
+
+    
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" 
+    crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" 
+    crossorigin="anonymous"></script>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" 
+    crossorigin="anonymous"></script>    
+
+    <script type="text/javascript" src="js/jquery.js"></script>
+
+    <!-- <script type="text/javascript" src="js/ecommerce.js"></script> -->
+
+    <script type="text/javascript">
+        
+        let url_user = "http://rem-rest-api.herokuapp.com/api/usermagazine";
+        let url_teste = "http://rest.learncode.academy/api/lms/user";
+       
+
+        
+        $("#btn-login").click(function(event){
+            event.preventDefault();
+
+            let $email = $("#login-email").val();
+            let $senha = $("#login-senha").val();      
+          
+            
+            let data_send = [{
+                nome:$email,
+                senha:$senha
+            }]
+
+            console.log(data_send);
+
+
+        });
+
+        $("#btn-create").click(function(event){
+            event.preventDefault();
+
+            let $email = $("#account-email").val();
+            let $senha = $("#account-senha").val();
+
+            let data_send = {
+                email:$email,
+                senha:$senha,
+            }     
+            console.log(data_send);
+            post(url_teste, data_send);
+            get(url_teste)         
+          
+        });
+         
+
+        function post(url_send, data_send) {
+            
+            $.ajax({
+                type:'POST',
+                url: url_send,
+                data: data_send,
+                //data: data_send,
+                dataType: "json",
+                /*contentType: "application/json",*/
+                success: function(data){
+                    console.log("→→→"+data.email)
+                }
+            })            
+        }
+
+        function get(url_get){
+            $.ajax({
+                type:'GET',
+                url: url_get,              
+                success: function(data){
+                    console.log(data)
+                }
+            })
+        }
+
+       
+       
+        
+    </script>
+</body>
+</html>

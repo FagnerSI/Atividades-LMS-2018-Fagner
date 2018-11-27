@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+    crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+    crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+
+    
+    <title>MagazineLive</title>
+</head>
+<body>
+    <nav class="navbar navbar-dark bg-dark">
+        <span class="text-info logo">MagazineLive</span>        
+        <div class="controls float-right">
+            <div id="car" class="dropdown">
+               <button class="btn btn-info dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <span class="fas fa-shopping-cart"></span> Carrinho
+              </button>
+              <div class="dropdown-menu text-center dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item btn-secondary" href="#">Action</a>
+
+                <a class="btn btn-info" href="index.html">
+                    Continuar comprando
+                </a>
+            </div>
+        </div>
+        <div id="create-account" class="dropdown">
+           <button class="btn btn-outline-info dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Criar conta
+        </button>
+        <form class="dropdown-menu p-4 dropdown-menu-right">             
+            <div class="form-group text-center">
+                <span>Crie sua conta</span>
+            </div>
+            <div class="form-group">
+                <label for="exampleDropdownFormEmail">Email</label>
+                <input id="account-email" type="email" class="form-control" id="exampleDropdownFormEmail" placeholder="email@mail.com" required="true">
+            </div>
+            <div class="form-group">
+                <label for="exampleDropdownFormPassword">Senha</label>
+                <input id="account-senha" type="password" class="form-control" id="exampleDropdownFormPassword" placeholder="Digite uma senha" required="true" minlength="8" maxlength="16">
+            </div>        
+
+            <button id="btn-create" type="submit" class="btn btn-info">Criar conta</button>
+        </form>
+    </div>   
+    <div id="login" class="dropdown">
+        <button id="btn-entrar" class="btn btn-outline-info dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Entrar
+        </button>
+        <form class="dropdown-menu p-4 dropdown-menu-right">
+            <div class="form-group">
+                <label for="exampleDropdownFormEmail">Email</label>
+                <input id="login-email" type="email" class="form-control" id="exampleDropdownFormEmail" placeholder="email@mail.com" required="true">
+            </div>
+            <div class="form-group">
+                <label for="exampleDropdownFormPassword">Senha</label>
+                <input id="login-senha" type="password" class="form-control" id="exampleDropdownFormPassword" placeholder="Digite uma senha" required="true" minlength="8" maxlength="16">
+            </div>        
+
+            <button id="btn-login" type="submit" class="btn btn-info">Entrar</button>
+        </form>
+    </div> 
+</div>
+</nav>
+
+<div class="container">
+ 
+ <div class="definition-hight">
+    <table class="table">
+        <thead class="btn-dark bg-dark">
+            <tr>              
+              <th scope="col">#</th>
+              <th scope="col">Nome</th>
+              <th scope="col">Quantidade</th>
+              <th scope="col">Preço</th>
+           </tr>
+      </thead>
+      <tbody>
+        <tr>     
+          <td>IMG</td>    
+          <td>Mark</td>
+          <td>Otto</td>
+          <td>@mdo</td>
+        </tr> 
+         <tr>     
+          <td>IMG</td>    
+          <td>Mark</td>
+          <td>Otto</td>
+          <td>@mdo</td>
+        </tr> 
+         <tr>     
+          <td>IMG</td>    
+          <td>Mark</td>
+          <td>Otto</td>
+          <td>@mdo</td>
+        </tr> 
+         <tr>     
+          <td>IMG</td>    
+          <td>Mark</td>
+          <td>Otto</td>
+          <td>@mdo</td>
+        </tr> 
+         <tr>     
+          <td>IMG</td>    
+          <td>Mark</td>
+          <td>Otto</td>
+          <td>@mdo</td>
+        </tr> 
+         <tr>     
+          <td>IMG</td>    
+          <td>Mark</td>
+          <td>Otto</td>
+          <td>@mdo</td>
+        </tr> 
+         <tr>     
+          <td>IMG</td>    
+          <td>Mark</td>
+          <td>Otto</td>
+          <td>@mdo</td>
+        </tr> 
+         <tr>     
+          <td>IMG</td>    
+          <td>Mark</td>
+          <td>Otto</td>
+          <td>@mdo</td>
+        </tr> 
+         <tr>     
+          <td>IMG</td>    
+          <td>Mark</td>
+          <td>Otto</td>
+          <td>@mdo</td>
+        </tr> 
+
+    </tbody>
+  </table>
+ </div>
+
+  <div class="card float-right bg-light">
+      <div class="card-body">
+        <h5 class="card-title">Total: R$ </h5> 
+        <a href="#" class="btn btn-info">Comprar</a>
+      </div>
+  </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" 
+crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" 
+crossorigin="anonymous"></script>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" 
+crossorigin="anonymous"></script>   
+
+</body>
+</html>   

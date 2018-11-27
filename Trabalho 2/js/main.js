@@ -68,7 +68,6 @@ let user_logado = document.querySelector(".header .user-name")
 user_logado.innerHTML = localStorage.getItem("user");
 
 
-
 if(localStorage.getItem("user")){
     login.innerHTML = "Sair";
 }
@@ -145,7 +144,7 @@ function addGroup() {
         
         if(request.readyState == 4){                    
             let resultRequest = JSON.parse(request.responseText);         
-            console.log(resultRequest.length)
+            
             if(resultRequest.length){
                 list_group.innerHTML = "";
                 body_chat.innerHTML = "";
@@ -215,12 +214,11 @@ if(localStorage.getItem("user")){
         if(groupAtive){
             send_msg(groupAtive, input_msg.value);
             input_msg.value = "";
-    }
+        }
         
     });
 
     function send_msg(groupID, content){
-        console.log(url_msg+groupID)
         let xmlr = new XMLHttpRequest;
 
         xmlr.onreadystatechange = function(){
@@ -252,8 +250,7 @@ if(localStorage.getItem("user")){
 
         xmlr.onreadystatechange = function(){
             if(xmlr.readyState == 4){
-                let data = JSON.parse(xmlr.responseText)
-                
+                let data = JSON.parse(xmlr.responseText)                
                 addGroup();          
             }        
         }
@@ -264,4 +261,7 @@ if(localStorage.getItem("user")){
         xmlr.setRequestHeader("Content-type", "application/json");
         xmlr.send(JSON.stringify(data_send));
     }
+  
 }
+
+
