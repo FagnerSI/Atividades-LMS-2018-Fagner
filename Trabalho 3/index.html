@@ -19,8 +19,9 @@
 <body>
     <nav class="navbar navbar-dark bg-dark">
         <span class="text-info logo">MagazineLive</span>        
+        
         <div class="controls float-right">
-            <div id="car" class="dropdown">
+            <div id="car" class="dropdown disabled-component">
                <button class="btn btn-info dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   <span class="fas fa-shopping-cart"></span> Carrinho
               </button>
@@ -32,7 +33,8 @@
                 </a>
               </div>
             </div>
-            <div id="create-account" class="dropdown">
+           
+           <div id="create-account" class="dropdown">
            <button class="btn btn-outline-info dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Criar conta
            </button>
@@ -47,7 +49,7 @@
                 <div class="form-group">
                     <label for="exampleDropdownFormPassword">Senha</label>
                     <input id="account-senha" type="password" class="form-control" id="exampleDropdownFormPassword" placeholder="Digite uma senha" required="true" minlength="8" maxlength="16">
-                </div>        
+                </div>                  
                
                  <button id="btn-create" type="submit" class="btn btn-info">Criar conta</button>
             </form>
@@ -56,7 +58,7 @@
             <button id="btn-entrar" class="btn btn-outline-info dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Entrar
            </button>
-           <form class="dropdown-menu p-4 dropdown-menu-right">
+           <form id="form-login" class="dropdown-menu p-4 dropdown-menu-right">
                 <div class="form-group">
                     <label for="exampleDropdownFormEmail">Email</label>
                     <input id="login-email" type="email" class="form-control" id="exampleDropdownFormEmail" placeholder="email@mail.com" required="true">
@@ -66,13 +68,14 @@
                     <input id="login-senha" type="password" class="form-control" id="exampleDropdownFormPassword" placeholder="Digite uma senha" required="true" minlength="8" maxlength="16">
                 </div>        
                
-                 <button id="btn-login" type="submit" class="btn btn-info">Entrar</button>
+                 <button id="btn-login" type="submit" class="btn btn-info" >Entrar</button>
             </form>
             </div> 
         </div>
         </nav>
 
     <div class="container">
+      
         <div class="row">
 
             <div class="col-sm-4">
@@ -249,77 +252,8 @@
 
     <script type="text/javascript" src="js/jquery.js"></script>
 
-    <!-- <script type="text/javascript" src="js/ecommerce.js"></script> -->
+    <script type="text/javascript" src="js/app.js"></script> 
 
-    <script type="text/javascript">
-        
-        let url_user = "http://rem-rest-api.herokuapp.com/api/usermagazine";
-        let url_teste = "http://rest.learncode.academy/api/lms/user";
-       
-
-        
-        $("#btn-login").click(function(event){
-            event.preventDefault();
-
-            let $email = $("#login-email").val();
-            let $senha = $("#login-senha").val();      
-          
-            
-            let data_send = [{
-                nome:$email,
-                senha:$senha
-            }]
-
-            console.log(data_send);
-
-
-        });
-
-        $("#btn-create").click(function(event){
-            event.preventDefault();
-
-            let $email = $("#account-email").val();
-            let $senha = $("#account-senha").val();
-
-            let data_send = {
-                email:$email,
-                senha:$senha,
-            }     
-            console.log(data_send);
-            post(url_teste, data_send);
-            get(url_teste)         
-          
-        });
-         
-
-        function post(url_send, data_send) {
-            
-            $.ajax({
-                type:'POST',
-                url: url_send,
-                data: data_send,
-                //data: data_send,
-                dataType: "json",
-                /*contentType: "application/json",*/
-                success: function(data){
-                    console.log("→→→"+data.email)
-                }
-            })            
-        }
-
-        function get(url_get){
-            $.ajax({
-                type:'GET',
-                url: url_get,              
-                success: function(data){
-                    console.log(data)
-                }
-            })
-        }
-
-       
-       
-        
-    </script>
+    
 </body>
 </html>

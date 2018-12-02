@@ -20,7 +20,7 @@
     <nav class="navbar navbar-dark bg-dark">
         <span class="text-info logo">MagazineLive</span>        
         <div class="controls float-right">
-            <div id="car" class="dropdown">
+            <div id="car" class="dropdown disabled-component">
                <button class="btn btn-info dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   <span class="fas fa-shopping-cart"></span> Carrinho
               </button>
@@ -73,18 +73,83 @@
 </nav>
 
 <div class="container">
- 
- <div class="definition-hight">
+ <div class="row">    
+ <div class="col-sm-9 definition-hight">
     <table class="table">
         <thead class="btn-dark bg-dark">
             <tr>              
-              <th scope="col">#</th>
               <th scope="col">Nome</th>
               <th scope="col">Quantidade</th>
               <th scope="col">Preço</th>
            </tr>
       </thead>
-      <tbody>
+      <tbody class="bg-light">
+        <tr>              
+          <td>Mark</td>
+          <td>Otto</td>
+          <td>@mdo</td>
+        </tr> 
+         <tr>  
+          <td>Mark</td>
+          <td>Otto</td>
+          <td>@mdo</td>
+        </tr> 
+         <tr> 
+          <td>Mark</td>
+          <td>Otto</td>
+          <td>@mdo</td>
+        </tr> 
+         <tr>
+          <td>Mark</td>
+          <td>Otto</td>
+          <td>@mdo</td>
+        </tr> 
+         <tr> 
+          <td>Mark</td>
+          <td>Otto</td>
+          <td>@mdo</td>
+        </tr> 
+         <tr>   
+          <td>Mark</td>
+          <td>Otto</td>
+          <td>@mdo</td>
+        </tr> 
+         <tr>    
+          <td>Mark</td>
+          <td>Otto</td>
+          <td>@mdo</td>
+        </tr> 
+        
+    </tbody>
+  </table>
+ </div>  
+  <div class="col-sm-3 card ">
+      <div class="card-body text-center">
+        <h5 class="card-title">Finalize sua compra</h5> 
+        <hr>
+        <p class="card-title">Total: R$</p> 
+        <a href="#" class="btn btn-info">Finalizar Compra</a>
+      </div>
+  </div>
+  </div>
+  
+  <div class="row">
+      <div class="col-sm-12 accordion" id="accordionExample">
+  <div class="card">
+    <div class="card-header bg-light" id="headingOne">
+      <h5 class="mb-0">
+        Compras Realizadas
+        <button class="btn btn-info float-right" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          Ver compras relizadas
+        </button>
+      </h5>
+    </div>
+
+    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+      <div class="card-body">
+        <table class="table">
+       
+      <tbody class="bg-light">
         <tr>     
           <td>IMG</td>    
           <td>Mark</td>
@@ -109,46 +174,15 @@
           <td>Otto</td>
           <td>@mdo</td>
         </tr> 
-         <tr>     
-          <td>IMG</td>    
-          <td>Mark</td>
-          <td>Otto</td>
-          <td>@mdo</td>
-        </tr> 
-         <tr>     
-          <td>IMG</td>    
-          <td>Mark</td>
-          <td>Otto</td>
-          <td>@mdo</td>
-        </tr> 
-         <tr>     
-          <td>IMG</td>    
-          <td>Mark</td>
-          <td>Otto</td>
-          <td>@mdo</td>
-        </tr> 
-         <tr>     
-          <td>IMG</td>    
-          <td>Mark</td>
-          <td>Otto</td>
-          <td>@mdo</td>
-        </tr> 
-         <tr>     
-          <td>IMG</td>    
-          <td>Mark</td>
-          <td>Otto</td>
-          <td>@mdo</td>
-        </tr> 
+        
 
     </tbody>
   </table>
- </div>
-
-  <div class="card float-right bg-light">
-      <div class="card-body">
-        <h5 class="card-title">Total: R$ </h5> 
-        <a href="#" class="btn btn-info">Comprar</a>
       </div>
+    </div>
+  </div>
+  
+</div>
   </div>
 </div>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" 
@@ -159,6 +193,9 @@ crossorigin="anonymous"></script>
 
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" 
 crossorigin="anonymous"></script>   
+
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/app.js"></script> 
 
 </body>
 </html>   

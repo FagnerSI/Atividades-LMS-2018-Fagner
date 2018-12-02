@@ -29,3 +29,8 @@ body {
 	height: 55vh;
 }
 
+.disabled-component {
+	display: none;
+}
+
+
