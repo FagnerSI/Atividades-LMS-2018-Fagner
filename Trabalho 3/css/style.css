@@ -34,3 +34,8 @@ body {
 }
 
 
+.card .card-body .value {
+    font-size: 25px;
+    color: #17A2C0;
+    font-weight: bold;
+}

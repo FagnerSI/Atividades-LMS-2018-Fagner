@@ -1,6 +1,7 @@
 
-let url_user = "http://rem-rest-api.herokuapp.com/api/usuarios";
+let url_user = "http://rem-rest-api.herokuapp.com/api/liveuser";
 let url_teste = "http://rest.learncode.academy/api/lms/user";
+let documento = window.location.href.substr(window.location.href.lastIndexOf("/") + 1);
 
 
 function appState(){
@@ -31,6 +32,7 @@ function appState(){
    $("#create-account").addClass("disabled-component");
    $("#car").removeClass("disabled-component"); 
    $(".input-group.disabled-component").removeClass("disabled-component"); 
+   handleClickButtonCard();
  }
 }
 
@@ -46,6 +48,7 @@ $("#btn-login").click(function(event){
     email:$email.val(),
     password:$password.val()
   }  
+  
 
   if(!login(user)){
 
@@ -82,11 +85,75 @@ $("#btn-create").click(function(event){
 
 });
 
-$(".card .input-group button").click(function(event){
+$("#car").click(function(){
+  
+ 
+  for(let i = 0; i < 6; i++){
+   
+    if(localStorage.getItem("product"+i)){
+       let product = JSON.parse(localStorage.getItem("product"+i));
 
- alert("OLa")               
+       let componentProduct = "<li class='list-group-item d-flex justify-content-between align-items-center'>"
+                     +product.name
+                     +"<br>"
+                     +"R$ "+product.value
+                     +"<span class='badge badge-primary badge-pill'>"
+                     +product.qtd
+                     +"</span> </li>";
 
-});
+       $("#car .list-group").append(componentProduct); 
+    }
+  }
+
+ });
+
+
+if(documento.indexOf("compras.html") != -1){
+ 
+  let total = 0;
+
+  for(let i = 0; i < 6; i++){
+   
+    if(localStorage.getItem("product"+i)){
+       let product = JSON.parse(localStorage.getItem("product"+i));
+
+       let componentProduct = "<tr>"
+                     +"<td>"+product.name+"</td>"
+                     +"<td>"+product.qtd+"</td>"
+                     +"<td>"+product.value+"</td>"
+                     +"</tr>";
+
+       $("#tableTemp tbody").append(componentProduct); 
+       total += parseFloat(product.value.replace(",","."));       
+    }
+
+    $("#total").text(" R$ "+ total);
+  }
+};
+
+
+function handleClickButtonCard(){
+
+  let btnsCards = $(".card .input-group button");
+  let titlesCards = $(".card .card-body .card-title");
+  let valueCards = $(".card .card-body .value i");  
+  let qtdsCards = $(".card .card-body .input-group input");   
+  
+  $.each(btnsCards, function(i, item) {   
+
+    btnsCards[i].addEventListener("click", function(){      
+
+      let product = { 
+        name: titlesCards[i].innerText,
+        value: valueCards[i].innerHTML,
+        qtd: qtdsCards[i].value
+      }
+
+      localStorage.setItem( "product"+i, JSON.stringify(product));
+     
+    });
+  });
+}
 
 
 function createAccount(user){  
@@ -100,23 +167,21 @@ function login(user){
  if(userString == localStorage.userCreated){
   localStorage.userLogado = userString;
   return true;
-}
+ }
 return false; 
 }
-
 
 function post(url_send, data_send) {       
 
   $.ajax({
     type:'POST',
     url: url_send,  
-    data: data_send,                
+    data: JSON.stringify(data_send),                
     success: function(data){                   
      console.log(data)
    }
  });         
 }       
-
 
 function get(url_get){
   $.ajax({
@@ -138,8 +203,8 @@ function alertUser(mensagem){
   let alertMensagem = "<div class='alert alert-danger role='alert'>"+mensagem+"<div>";
   
   if($("#info").children()){
-     $("#info").empty();
-  }
-  $("#info").append(alertMensagem);
-  
+   $("#info").empty();
+ }
+ $("#info").append(alertMensagem);
+
 }
