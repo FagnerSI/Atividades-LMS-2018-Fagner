@@ -1,6 +1,6 @@
 
 let url_user = "http://rem-rest-api.herokuapp.com/api/liveuser";
-let url_teste = "http://rest.learncode.academy/api/lms/user";
+let url_teste = "http://rest.learncode.academy/api/lms/protucts";
 let documento = window.location.href.substr(window.location.href.lastIndexOf("/") + 1);
 
 
@@ -107,6 +107,17 @@ $("#car").click(function(){
 
  });
 
+$("#finaleAll").click(function(){
+ 
+  for(let i = 0; i < 6; i++){   
+    
+    if(localStorage.getItem("product"+i)){
+       post(url_teste, JSON.parse(localStorage.getItem("product"+i)));
+     }
+   }
+   
+   get(url_teste);
+});
 
 if(documento.indexOf("compras.html") != -1){
  
@@ -129,6 +140,8 @@ if(documento.indexOf("compras.html") != -1){
 
     $("#total").text(" R$ "+ total);
   }
+
+  get(url_teste);
 };
 
 
@@ -176,26 +189,38 @@ function post(url_send, data_send) {
   $.ajax({
     type:'POST',
     url: url_send,  
-    data: JSON.stringify(data_send),                
+    data: data_send,                
     success: function(data){                   
      console.log(data)
    }
- });         
+ }); 
+
 }       
 
 function get(url_get){
   $.ajax({
     type:'GET',
     url: url_get,              
-    success: function(data){
+    success: function(data){     
       handleData(data); 
     }
   });
 }
 
 function handleData(data){
- $.each(data, function(i, item) {
-   console.log(data[i].email);
+  
+ $("#tableTempFinale tbody").empty();
+ 
+ $.each(data, function(i, item) {   
+
+     let componentProduct = "<tr>"
+     +"<td>"+data[i].name+"</td>"
+     +"<td>"+data[i].qtd+"</td>"
+     +"<td>"+data[i].value+"</td>"
+     +"</tr>";
+
+     $("#tableTempFinale tbody").append(componentProduct);
+
  });
 }
 
